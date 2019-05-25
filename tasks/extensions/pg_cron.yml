@@ -1,0 +1,8 @@
+- name: Install pg_cron
+  apt:
+    name: "postgresql-{{ postgresql_version }}-cron"
+    state: present
+    update_cache: yes
+    cache_valid_time: "{{ apt_cache_valid_time | default (3600) }}"
+  when: ansible_os_family == "Debian"
+  notify: restart postgresql

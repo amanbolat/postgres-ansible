@@ -34,6 +34,8 @@ postgresql_database_owner: "{{ postgresql_admin_user }}"
 postgresql_ext_install_contrib: no
 postgresql_ext_install_dev_headers: no
 postgresql_ext_install_postgis: no
+postgresql_ext_install_pg_cron: no
+postgresql_ext_install_plpython: no
 
 postgresql_ext_postgis_version: "2.5" # be careful: check whether the postgresql/postgis versions work together
 
